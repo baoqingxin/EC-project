@@ -1,0 +1,43 @@
+<div class="main">
+    <div id="header">
+        <div class="logo">电脑商城</div>
+        <div class="nav-main">
+            <ul class="list-inline">
+                <li ui-sref="goods-show">全部</li>
+                <li ui-sref="goods-show({brand:'联想'})">联想</li>
+                <li ui-sref="goods-show({brand:'惠普'})">惠普</li>
+                <li ui-sref="goods-show({brand:'戴尔'})">戴尔</li>
+            </ul>
+        </div>
+    </div>
+    <div id="nav-bd">
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                </div>
+            </uib-slide>
+        </uib-carousel>
+    </div>
+    <h3>商品展示</h3>
+    <div id="bar_tabs">
+        <div class="banner-left"><img src="assets/images/big_icon.jpg" alt="" style="width: 396px;height: 500px"></div>
+        <div class="banner-right">
+            <ul>
+                <li ng-repeat="good in goods" ui-sref="goods-detail({id:good.id,img:good.img})" ng-show="good.state==1">
+                    <div class="img-brand">{{good.brand}}</div>
+                    <div class="img-price">￥{{good.price}}</div>
+                    <img ng-src="{{good.img}}" alt="暂无图片" style="width: 196px;height: 200px;" class="home-icon">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sales-promotion">
+        <ul>
+            <li><img src="assets/images/service_items_1.png"></li>
+            <li><img src="assets/images/service_items_2.png"></li>
+            <li><img src="assets/images/service_items_3.png"></li>
+            <li><img src="assets/images/service_items_4.png"></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        添加商品
+    </div>
+</div>
+<div id="vendor-post">
+    <h3 class="panel-title">商品参数：</h3>
+    <br>
+    <table class="table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <td>品牌</td>
+            <td>颜色</td>
+            <td>尺寸</td>
+            <td>操作系统</td>
+        </tr>
+        <tr>
+            <td>
+                <select class="form-control" ng-model="add_brand" ng-options="band for band in bands">
+                    <option selected>联想</option>
+                    <option>惠普</option>
+                    <option>戴尔</option>
+                </select>
+            </td>
+            <td class="td-sel-center">
+                <input type="text" placeholder="黑色" name="11" ng-model="add_color">
+            </td>
+            <td class="td-sel-center">
+                <input type="text" placeholder="14寸" ng-model="add_size">
+            </td>
+            <td>
+                <select class="form-control" ng-model="add_system">
+                    <option selected>Windows7</option>
+                    <option>Windows8.1</option>
+                    <option>Windows10</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>运行内存</td>
+            <td>CPU类型</td>
+            <td>CPU核心数</td>
+            <td>硬盘容量</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="4G" ng-model="add_ram"></td>
+            <td><input type="text" placeholder="intel CORE i5" ng-model="add_cpu"></td>
+            <td><input type="text" placeholder="双核" ng-model="add_type"></td>
+            <td><input type="text" placeholder="500G" ng-model="add_capacity"></td>
+        </tr>
+        <tr>
+            <td>价格</td>
+            <td>库存</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="3000" ng-model="add_price"></td>
+            <td><input type="text" placeholder="50" ng-model="add_repertory"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3 class="panel-title">商品描述：</h3>
+    <br>
+    <form role="form">
+        <div class="form-group">
+            <textarea class="form-control" rows="3" ng-model="add_description"></textarea>
+        </div>
+    </form>
+    <h3 class="panel-title">上传图片：</h3>
+    <br>
+    <button ngf-select="uploadFiles($files, $invalidFiles)" multiple
+            accept="image/*">
+        上传图片</button>
+    <br>
+    文件：
+    <ul>
+        <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
+      <span class="progress" ng-show="f.progress >= 0">
+        <div style="width:{{f.progress}}%"
+             ng-bind="f.progress + '%'"></div>
+      </span>
+        </li>
+        <li ng-repeat="f in errFiles" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}
+        </li>
+    </ul>
+    {{errorMsg}}
+    <div ng-show="errorImg">{{errorImg}}</div>
+    <div class="img-group">
+        <ul class="list-inline">
+            <li><img ng-src="{{path}}" alt="主图" style="width: 100px;height: 100px"></li>
+        </ul>
+    </div>
+
+    <input type="button" class="btn btn-primary" value="保存" ng-click="addGoods()" ng-disabled="!path">
+    <input type="button" class="btn btn-default" value="取消">
+</div>
+
+
+

@@ -1,0 +1,32 @@
+<div class="main">
+    <div id="goods-select">
+        <ul class="list-group">
+            <li class="list-group-item my-group-li">
+                <div class="sel-label">尺寸：</div>
+                <div class="sel-bd">
+                    <ul class="list-inline">
+                        <li ng-repeat="size in sizes" ng-class="top_blue[$index]"  ng-click="sizeSelect($index)">{{size}}英寸</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item my-group-li">
+                <div class="sel-label">价格：</div>
+                <div class="sel-bd">
+                    <ul class="list-inline">
+                        <li ng-repeat="price in prices" ng-class="blue[$index]" ng-click="priceSelect($index)">{{price}}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="goods-show">
+        <ul>
+            <li class="goods" ng-repeat="good in goods" ui-sref="goods-detail({id:good.id,img:good.img})"  ng-if="good.state==1">
+                <div class="goods-picture"><img ng-src="{{good.img}}" alt="图片暂无"></div>
+                <div class="goods-price">￥{{good.price}}</div>
+                <div class="short-describe">{{good.brand}} {{good.cpu}} {{good.size}}英寸</div>
+                <div class="btn btn-primary shop-btn">点击购买</div>
+            </li>
+        </ul>
+    </div>
+</div>

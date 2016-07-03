@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        我的订单
+    </div>
+</div>
+<div id="purchaser-bd">
+        <ul class="nav nav-pills">
+            <li ng-repeat="item in items" ng-class="active[$index]" ng-click="setItem($index)"><a href="">{{item}}</a></li>
+        </ul>
+    <div class="order-list">
+        <ul>
+            <li ng-repeat="order in orders">
+                <table class="table table-bordered">
+                    <tr>
+                        <!--<td colspan="4">-->
+                            <!--<div class="order-top">-->
+                                <!--<span>2016-01-29 21:26:43</span>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                <!--<span>订单号：119701700343</span>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                    </tr>
+                    <tr>
+                        <td class="td-large">
+                            <!--<div class="order-detail-left" ng-class="$last?'':'td-border'">-->
+                            <div class="order-detail-left">
+                                <img ng-src="{{order.img}}" alt="图片暂无"
+                                     style="width: 80px;height:80px;padding:10px;float: left">
+                                <div class="goods-info">{{order.description}}</div>
+                                <div class="goods-order-num">x{{order.quantity}}</div>
+                            </div>
+                        </td>
+                        <td class="order-td text-center">
+                            <div class="order-detail-right"><span>{{order.account}}</span></div>
+                        </td>
+                        <td class="order-td text-center">
+                            <div class="order-detail-right"><span>总额￥{{order.price}}</span></div>
+                        </td>
+                        <td class="order-td text-center">
+                            <div class="order-detail-right">
+                                <span ng-if="order.state==0&&role==0">待收货</span>
+                                <span ng-if="order.state==0&&role==1">待发货</span>
+                                <span ng-if="order.state==1">已完成</span>
+                                <input type="button" class="btn btn-primary" value="发货" ng-if="order.state==0&&role==1" ng-click="changeState(order.id)">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>

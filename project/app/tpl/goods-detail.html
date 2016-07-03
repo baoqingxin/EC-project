@@ -1,0 +1,64 @@
+<div class="main">
+    <div id="goods-picture-bg">
+        <div class="picture-bg">
+            <img ng-src="{{img}}" alt="图片暂无" style="width: 100%;height: auto">
+        </div>
+    </div>
+    <div id="goods-info">
+        <h1>{{goods.description}}</h1>
+        <div class="goods-detail-item">
+            <div class="property-type">价　　格：</div>
+            <span class="goods-price">￥{{goods.price}}</span></div>
+        <div class="goods-detail-item">
+            <div class="property-type">服　　务：</div>
+            由本店发货并提供售后服务。11.10前完成下单，预计<strong>明天中午</strong>送达
+        </div>
+        <div id="param" class="goods-detail-item">
+            <div class="property-type">规格参数：</div>
+            <div id="parameters">
+                <ul>
+                    <li>
+                        <div class="param-left">品牌：</div>
+                        <div class="param-right">{{goods.brand}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">尺寸：</div>
+                        <div class="param-right">{{goods.size}}英寸</div>
+                    </li>
+                    <li>
+                        <div class="param-left">颜色：</div>
+                        <div class="param-right">{{goods.color}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">操作系统：</div>
+                        <div class="param-right">{{goods.system}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">内存：</div>
+                        <div class="param-right">{{goods.ram}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">CPU类型：</div>
+                        <div class="param-right">{{goods.cpu}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">核心数：</div>
+                        <div class="param-right">{{goods.type}}</div>
+                    </li>
+                    <li>
+                        <div class="param-left">硬盘：</div>
+                        <div class="param-right">{{goods.capacity}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="goods-detail-item">
+            <div class="num-btn">
+                <div class="goods-num">{{num}}</div>
+                <div class="plus-btn" ng-click="numPlus()">+</div>
+                <div class="reduce-btn" ng-click="numReduce()">-</div>
+            </div>
+            <div class="btn btn-primary" ui-sref="shopping({id:id,description:goods.description,price:goods.price,color:goods.color,num:num,img:img})">购买</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div id="register-page">
+    <form id="register-form" novalidate name="registerForm">
+        <div class="register-title">欢迎注册</div>
+        <div class="register-panel">
+            <label>用户名：</label>
+            <input type="text" placeholder="请输入用户名" name="user" maxlength="20" ng-minlength="4" ng-model="register_name" required>
+            <div class="form-error" ng-show="registerForm.user.$dirty&&registerForm.user.$invalid">
+                <span ng-show="registerForm.user.$error.required">*请填写用户名</span>
+                <span ng-show="registerForm.user.$error.minlength">*至少4个字符</span>
+            </div>
+        </div>
+        <div class="register-panel">
+            <label>设置密码：</label>
+            <input type="password" placeholder="请输入密码" name="pwd" ng-model="register_pwd" ng-minlength="6" maxlength="20" required>
+            <div class="form-error" ng-show="registerForm.pwd.$dirty&&registerForm.pwd.$invalid">
+               <span ng-show="registerForm.pwd.$error.required">*请填写密码</span>
+                <span ng-show="registerForm.pwd.$error.minlength">*至少6位</span>
+            </div>
+        </div>
+        <div class="register-panel">
+            <label>确认密码：</label>
+            <input type="password" placeholder="确认密码" name="pwd_once" ng-model="register_pwd_once" ng-minlength="6" maxlength="20" required ng-keyup="checked()">
+            <div class="form-error" ng-show="registerForm.pwd_once.$dirty&&registerForm.pwd_once.$invalid">
+                <span ng-show="registerForm.pwd_once.$error.required">*请再次输入密码</span>
+                <span ng-show="registerForm.pwd_once.$error.minlength">*至少6个位</span>
+                <span ng-show="sure_pwd">密码不一致</span>
+            </div>
+            <div class="form-error" ng-show="registerForm.pwd_once.$dirty&&registerForm.pwd_once.$valid">
+                <span ng-show="sure_pwd">密码不一致</span>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-lg btn-block" id="register-btn" value="立即注册"
+               ng-click="register()" ng-disabled="registerForm.$invalid||sure_pwd">
+    </form>
+</div>

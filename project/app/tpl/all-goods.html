@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        全部商品
+    </div>
+</div>
+<div id="purchaser-bd">
+    <ul class="nav nav-pills">
+        <li ng-repeat="list in lists" ng-class="another_active[$index]" ng-click="anotherSetItem($index)">
+            <a href="">{{list}}</a>
+        </li>
+    </ul>
+    <div class="order-list">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <td>商品</td>
+                <td class="td-bd-center">品牌</td>
+                <td class="td-bd-center">库存</td>
+                <td class="td-bd-center">单价</td>
+                <td class="td-bd-center">状态/操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="good in goods">
+                <td class="td-width">
+                    <img ng-src="{{good.img}}" alt="图片暂无"
+                         style="width: 80px;height:80px;padding:10px;border: 1px solid silver;float: left;">
+                    <div class="goods-describe">{{good.description}}</div>
+                </td>
+                <td class="td-bd-center">
+                    {{good.brand}}
+                </td>
+                <td class="td-bd-center">
+                    {{good.repertory}}
+                </td>
+                <td class="td-bd-center">
+                    {{good.price}}
+                </td>
+                <td class="td-bd-center">
+                    <span ng-if="good.state==1">已上架</span><span ng-if="good.state==0">待上架</span>
+                    <br>
+                    <input type="button" ng-if="good.state==1" class="btn btn-primary" value="下架" ng-click="changeGoodsState(good.id,good.state)">
+                    <input type="button" ng-if="good.state==0" class="btn btn-primary" value="上架" ng-click="changeGoodsState(good.id,good.state)">
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

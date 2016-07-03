@@ -1,0 +1,86 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        收货地址
+    </div>
+</div>
+<div class="add-address">
+    <div class="address-top" ng-show="!consignee_address">
+        暂无地址
+        <button type="button" class="btn btn-primary btn-sm" ng-click="addAddress()">
+            新增收货地址
+        </button>
+    </div>
+    <!--添加地址页面-->
+    <div class="modal-dialog my-modal" ng-show="modal_show">
+        <div class="modal-content my-modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true" ng-click="modalClose()">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    新增收货地址
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" name="addressForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">*收货人
+                            <span class="form-error" ng-show="addressForm.name.$dirty&&addressForm.name.$invalid">
+                                请输入2～4个字符
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" id="name"
+                               placeholder="请输入收货人名字" ng-minlength="2" maxlength="4" ng-maxlength="4" ng-model="consignee" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">*收货地址
+                                 <span class="form-error" ng-show="addressForm.address.$dirty&&addressForm.address.$invalid">
+                                请输入10～100个字符
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" id="address"
+                               placeholder="请输入收货地址" ng-model="consignee_address" maxlength="100" ng-minlength="10" ng-maxlength="100" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-num">*手机号码
+                                <span class="form-error" ng-show="addressForm.phone.$dirty&&addressForm.phone.$invalid">
+                                手机号码不合法，请重新输入
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" id="phone-num"
+                               placeholder="请输入手机号码" ng-model="phone" name="phone" maxlength="11" ng-pattern="/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/" required>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal" ng-click="modalClose()">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" ng-disabled="addressForm.phone.$invalid" ng-click="modalSave()">
+                            保存
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="address-list" ng-show="consignee_address">
+        <div class="address-item">
+            <div class="address-item-name">收货人：</div>
+            <div class="address-item-content">{{consignee}}</div>
+        </div>
+        <div class="address-item">
+            <div class="address-item-name">地址：</div>
+            <div class="address-item-content">{{consignee_address}}</div>
+        </div>
+        <div class="address-item">
+            <div class="address-item-name">手机号：</div>
+            <div class="address-item-content">{{phone}}</div>
+        </div>
+        <div class="address-item">
+            <ul class="list-inline address-ul">
+                <li ng-click="addAddress()">编辑</li>
+            </ul>
+        </div>
+    </div>
+</div>

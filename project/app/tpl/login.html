@@ -1,0 +1,37 @@
+<div id="login-page">
+    <div id="login-panel">
+        <div id="login-info">
+            <span id="login-info-left">会员登录</span>
+            <span id="login-info-right" ui-sref="register">立即注册</span>
+        </div>
+        <form class="form-horizontal my-form" name="loginForm" novalidate role="form">
+            <div class="login-form-error">{{login.err}}</div>
+            <div class="form-group my-group" id="my-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" name="user" placeholder="用户名" ng-minlength="4" ng-maxlength="20" ng-model="login.user" required>
+                </div>
+                <div class="login-form-error">
+                    <div ng-show="loginForm.user.$invalid&&loginForm.user.$dirty">
+                        <span ng-show="loginForm.user.$error.required">*请填写用户名</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" name="pwd" placeholder="密码"  ng-maxlength="20" ng-minlength="6" ng-model="login.pwd" required>
+                </div>
+                <div class="login-form-error">
+                    <div class="login-form-pwd" ng-show="loginForm.pwd.$invalid&&loginForm.pwd.$dirty">
+                        <span ng-show="loginForm.pwd.$error.required">*请填密码</span>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg btn-block" value="登录" id="login-btn" ng-disabled="loginForm.$invalid" ng-click="login()">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="shop-main">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            全部商品
+        </div>
+    </div>
+
+    <div class="address-sel-list">
+        <h3 class="panel-title">收货人信息：</h3>
+        <ul>
+            <li>{{consignee}} {{consignee_address}} {{phone}}</li>
+        </ul>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <td>商品</td>
+            <td>颜色</td>
+            <td>单价</td>
+            <td>数量</td>
+            <td>价格</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><img ng-src="{{img}}" alt="我是图片" style="width: 80px;height: 80px;padding: 10px;"> {{description}}</td>
+            <td>{{color}}</td>
+            <td>{{price}}</td>
+            <td>{{num}}</td>
+            <td>{{total}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+    <div class="shopping-bottom">
+        <div class="column account-btn">
+            <button class="btn btn-primary" ng-click="account()">去结算</button>
+        </div>
+    </div>
+</div>

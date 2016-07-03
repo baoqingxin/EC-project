@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="order-left-menu">
+        <a ng-repeat="purchaser in purchasers" class="btn btn-block btn-default"
+           ng-class="{'btn-primary':purchaser==current}" ng-click="setScreen($index)">
+            {{purchaser}}
+        </a>
+    </div>
+    <div class="order-right-content">
+        <div ui-view></div>
+    </div>
+</div>

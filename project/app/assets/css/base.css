@@ -1,0 +1,754 @@
+body {
+    font: 14px "Microsoft YaHei";
+}
+
+* {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+input[type="text"] {
+    padding-left: 10px;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    color: white;
+    background-color: #363636;
+}
+
+.footer-main {
+	padding:0;
+    width: 1200px;
+    margin: auto;
+	line-height: 80px;
+}
+.panel-body{
+   font-size: 18px;
+}
+
+/*-------------------------------------首页-----------------------------------------------------*/
+.logo{
+    font-size: 34px;
+    padding: 20px 0;
+}
+#side-nav {
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    color: #bfbfbf;
+    position: relative;
+    background-color: #363636;
+}
+
+.side-nav-bd {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.side-nav-bd .column:hover {
+    color: #23ac38;
+    cursor: pointer;
+}
+.nav-main{
+    background-color: #74a6ff;
+}
+.img-brand{
+    padding-left: 12px;
+    font-size: 16px;
+}
+.img-price{
+    font-size: 16px;
+    padding-left: 12px;
+    color: red;
+}
+.nav-main ul li{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.24);
+    margin-left: 4px;
+}
+.carousel-indicators  .active{
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    border: 2px solid white;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+    height: 300px;
+}
+.login-nav {
+    width: 100px;
+    margin-left: 900px;
+}
+
+.my-order {
+    margin-left: 20px;
+}
+
+.free-register {
+    float: right !important;
+}
+#header {
+    width: 100%;
+    margin-top: 2px;
+}
+
+#nav-bd {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    margin-top: 2px;
+}
+
+#bar_tabs {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}
+.banner-left{
+    width: 396px;
+    height: 500px;
+    float: left;
+}
+.banner-right{
+    width: 800px;
+    height: 500px;
+    float: left;
+}
+.banner-right ul li{
+    width: 200px;
+    height: 250px;
+    float: left;
+    border-right: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    cursor: pointer;
+    overflow: hidden;
+}
+.banner-right ul li:hover .home-icon{
+    transform: translate(-20px,0px);
+    transition: transform 1s;
+}
+.banner-right ul li:nth-of-type(1){
+    border-top: 1px solid #e8e8e8;
+}
+.banner-right ul li:nth-of-type(2){
+    border-top: 1px solid #e8e8e8;
+}
+.banner-right ul li:nth-of-type(3){
+    border-top: 1px solid #e8e8e8;
+}
+.banner-right ul li:nth-of-type(4){
+    border-top: 1px solid #e8e8e8;
+}
+.sales-promotion {
+    height: 54px;
+    width: 100%;
+    background-color: white;
+    margin-top: 2px;
+}
+.sales-promotion ul li{
+    width: 298px;
+    height: 54px;
+    background-color: #F5F5F5;
+    float: left;
+    text-align: center;
+}
+
+/*------------------------------------------------商品展示页----------------------------------------------------------*/
+#goods-select {
+    width: 1200px;
+    margin-top: 2px;
+    background-color: white;
+}
+.blue{
+    color: blue;
+}
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+.my-group-li {
+    padding: 0;
+    line-height: 30px;
+}
+
+.sel-label {
+    display: inline-block;
+    width: 140px;
+    padding: 2px 16px;
+    background-color: #f3f3f3;;
+}
+
+.sel-bd {
+    display: inline-block;
+}
+
+.sel-bd .list-inline li {
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+#goods-show {
+    width: 100%;
+    background-color: white;
+    font-size: 0;
+}
+
+.goods {
+    width: 280px;
+    height: 390px;
+    display: inline-block;
+    margin: 9px;
+}
+
+.goods:hover {
+    outline: 1px solid rgb(200, 22, 35);
+}
+
+.goods:hover .goods-picture img {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    transition: transform 1s;
+}
+
+.goods .goods-picture img {
+    width: 100%;
+    height: auto
+}
+
+.goods-picture {
+    width: 240px;
+    height: 240px;
+    margin: 20px 20px 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.goods-price {
+    font-size: 16px;
+    color: red;
+    margin: 14px 20px 0;
+}
+
+.short-describe {
+    font-size: 14px;
+    color: #0f0f0f;
+    margin: 10px 20px 0;
+}
+
+.shop-btn {
+    margin: 10px 20px 0;
+}
+
+/*--------------------------------------------------商品详情页-------------------------------------------------------*/
+#goods-picture-bg {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    float: left;
+}
+
+#goods-info {
+    width: 780px;
+    height: 500px;
+    float: left;
+    padding: 20px;
+}
+
+#goods-info h1 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+#goods-info .goods-price {
+    margin-left: 0;
+    font-size: 18px;
+}
+
+.goods-detail-item {
+    margin-top: 20px;
+}
+
+.property-type {
+    width: 80px;
+    background-color: white;
+    display: inline;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.num-btn {
+    width: 52px;
+    height: 40px;
+    margin-left: 10px;
+    float: left;
+}
+.goods-num {
+    height: 31px;
+    width: 32px;
+    float: left;
+    line-height: 31px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #4dddff;
+}
+
+.plus-btn, .reduce-btn {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    float: left;
+    text-align: center;
+    margin-left: -1px;
+    border: 1px solid #4dddff;
+    line-height: 16px;
+    cursor: pointer
+}
+.reduce-btn::selection{
+    background-color: transparent;
+}
+.plus-btn::selection{
+    background-color: transparent;
+}
+.reduce-btn {
+    margin-top: -1px;
+    float: left;
+}
+
+#parameters {
+    width: 695px;
+    height: 80px;
+    float: right;
+}
+
+#parameters .param-left {
+    width: 80px;
+    float: left;
+    margin-bottom: 4px;
+    text-align: right;
+    margin-left: 20px;
+}
+
+#parameters .param-right {
+    width: 200px;
+    margin-bottom: 4px;
+    float: left;
+}
+
+#param {
+    height: 120px;
+}
+
+/*--------------------------------------会员登录界面-----------------------------------------------*/
+#login-page {
+    width: 100%;
+    height: 550px;
+    background-color: #e3e3e3;
+}
+
+#login-panel {
+    width: 300px;
+    height: 320px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    top: 80px;
+}
+
+#login-info-left {
+    font-size: 18px;
+}
+
+#login-info-right {
+    color: #d454ff;
+    float: right;
+    cursor: pointer;
+}
+
+#login-info-right:hover {
+    color: #ff4c2f;
+}
+
+#login-btn {
+    margin-top: 20px;
+}
+.my-group {
+    margin: 20px 0 !important;
+    position: relative;
+}
+#my-group{
+    margin-top: 0!important;
+}
+.my-group .input-group .input-group-addon span {
+    color: #337ab7;
+}
+.login-form-error {
+    height: 22px;
+    margin: 4px 0;
+    color: red;
+}
+.checkbox{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+/*----------------------------------------------注册界面---------------------------------------------------------*/
+#register-page {
+    width: 100%;
+    min-height: 600px;
+    background-color: #e3e3e3;
+}
+
+.register-title {
+    font-size: 18px;
+}
+
+#register-form {
+    width: 520px;
+    height: 480px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.register-panel {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.register-panel label {
+    width: 110px;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    outline: 1px solid #A9A9A9;
+}
+
+.register-panel input[type="text"] {
+    width: 369px;
+    height: 52px;
+    margin-left: -6px;
+    border: 1px solid #A9A9A9;
+    padding-left: 10px;
+}
+
+.register-panel input[type="password"] {
+    width: 369px;
+    height: 52px;
+    margin-left: -6px;
+    border: 1px solid #A9A9A9;
+    padding-left: 10px;
+}
+
+.form-error {
+    color: red;
+}
+
+#register-btn {
+    margin-top: 30px;
+}
+
+/*--------------------------------------------------用户界面------------------------------------------------------*/
+.main {
+    width: 1200px;
+    min-height: 550px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.order-left-menu {
+    float: left;
+    margin-top: 20px;
+    width: 200px;
+    padding: 10px;
+}
+
+.order-right-content {
+    width: 950px;
+    min-height: 500px;
+    display: inline-block;
+}
+
+/*--------------------------------------------------我的订单界面-----------------------------------------------------------*/
+#purchaser-bd {
+    margin-top: 18px;
+    background-color: white;
+}
+
+.order-top {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.order-detail {
+    min-height: 80px;
+}
+
+.order-detail-left {
+    width: 600px;
+    height: 80px;
+    padding: 0;
+}
+
+.td-border {
+    border-bottom: 1px solid #ddd;;
+}
+
+.td-large {
+    padding: 0 !important;
+}
+
+.goods-info {
+    width: 300px;
+    height: 80px;
+    padding: 10px;
+    float: left;
+}
+
+.goods-order-num {
+    width: 100px;
+    height: 80px;
+    padding: 10px;
+    float: left;
+}
+
+.order-detail-right {
+    width: 100px;
+    height: 100%;
+}
+
+.order-td {
+    padding-top: 10px;
+    vertical-align: top;
+}
+
+/*-------------------------------------------------address界面---------------------------------------------------*/
+.address-list {
+    padding: 0 10px 10px;
+    margin-top: 10px;
+    height: 128px;
+    background-color: #fafafa;
+    border: 2px dashed #dbdbdb;
+}
+
+.address-item {
+    margin-top: 16px;
+}
+
+.address-item:nth-last-of-type(1) {
+    margin-top: -10px;
+}
+
+.address-item-name {
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+}
+
+.address-item-content {
+    display: inline-block;
+}
+
+.my-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.67);
+}
+
+.my-modal-content {
+    width: 600px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -300px;
+    margin-top: -180px;
+}
+
+.address-ul {
+    float: right;
+}
+
+.address-ul li {
+    cursor: pointer;
+}
+
+.address-ul li:hover {
+    color: red;
+}
+
+/*--------------------------------------------购物车界面--------------------------------------------------------*/
+.shop-main {
+    width: 1000px;
+    min-height: 550px;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+}
+.address-sel-list{
+    background-color: #eeeeee;
+    height: 60px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+}
+.address-sel-list ul li{
+    padding-left: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.all-check-btn {
+    padding-left: 12px;
+    width: 126px;
+}
+
+.shopping-top {
+    line-height: 40px;
+    height: 40px;
+    background-color: #eeeeee;
+}
+
+.shopping-price {
+    margin-left: 420px;
+}
+
+.shopping-quantity {
+    margin-left: 50px;
+}
+
+.shopping-sum {
+    margin-left: 90px;
+}
+
+.shopping-action {
+    margin-left: 50px;
+}
+
+.shopping-list {
+    margin-top: 20px;
+}
+
+.shopping-list ul li {
+    height: 80px;
+    margin-top: 2px;
+    background-color: #eeeeee;
+}
+
+.shopping-list ul li > div {
+    padding-top: 10px;
+    height: 80px;
+}
+
+.shopping-bottom {
+    margin-top: 20px;
+    line-height: 40px;
+    height: 40px;
+    background-color: #eeeeee;
+}
+
+.car-goods-img {
+    padding-top: 0 !important;
+    width: 100px;
+}
+
+.car-goods-des {
+    width: 350px;
+}
+
+.car-goods-col {
+    width: 100px;
+}
+
+.car-goods-price {
+    width: 100px;
+}
+
+.car-goods-quantity {
+    width: 120px;
+}
+
+.car-goods-sum {
+    width: 100px;
+}
+
+.car-goods-act {
+    width: 100px;
+}
+
+.sel-num {
+    margin-left: 400px;
+}
+
+.total-price {
+    margin-left: 50px;
+}
+
+.account-btn {
+    float: right !important;
+}
+
+.my-check-btn {
+    position: relative;
+    top: 2px;
+}
+
+/*-------------------------------------------商家商品界面---------------------------------------------------------*/
+.td-bd-center {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.goods-describe {
+    width: 300px;
+    float: left;
+    padding-left: 10px;
+}
+
+.td-width {
+    width: 440px;
+}
